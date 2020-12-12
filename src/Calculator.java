@@ -1,17 +1,15 @@
 import java.util.Scanner;
 
 /**
- * Ejemplo más complejo que nos permite utilizar
+ * Ejemplo que nos permite utilizar
  *
  *  - Variables numúricas
  *  - Operadores
  *  - Expresiones
- *  - Estructuras de decisián
+ *  - Estructuras de decisión
  *  - Estructuras de repetición
  *
  */
-
-
 
 public class Calculator {
 
@@ -20,26 +18,25 @@ public class Calculator {
      */
     public static void main(String ...args) {
 
-        //Variable donde almacenamos el valor seleccionado
-        //del menú
+        //Variable donde almacenamos el valor seleccionado del menú
         int opcion = 0;
-        //Por ahora, es normal si no se comprenden estas dos
-        //líneas de código.
+
+        //Por ahora, es normal si no se comprenden estas dos líneas de código.
         Scanner sc;
+
         sc = new Scanner(System.in);
 
         do {
-
             //Imprimimos por consola el menú
-            System.out.println("\n"); //Este caracter especial nos permite imprimir una línea en blanco
-            System.out.println("***** CALCULADORA HARDSOFTDAY *****");
-            System.out.println("1. Sumar");
-            System.out.println("2. Restar");
-            System.out.println("3. Multiplicar");
-            System.out.println("4. Dividir");
-            System.out.println("5. Resto");
-            System.out.println("0. Salir del programa");
-            System.out.print("Introduzca una opción válida: ");
+            System.out.println( "\n"); //Este caracter especial nos permite imprimir una línea en blanco
+            System.out.println( "***** CALCULADORA HARDSOFTDAY *****" );
+            System.out.println( "1. Sumar" );
+            System.out.println( "2. Restar" );
+            System.out.println( "3. Multiplicar" );
+            System.out.println( "4. Dividir" );
+            System.out.println( "5. Resto" );
+            System.out.println( "0. Salir del programa" );
+            System.out.print( "Introduzca una opción válida: " );
 
             //Estas líneas de código nos permiten leer del teclado
             //y transformar el valor leído de String a int
@@ -52,20 +49,20 @@ public class Calculator {
             //Si la opcion es menor que 0 o mayor que 5, no es una
             //opción válida
             if (opcion < 0 || opcion > 5) {
-                System.out.println("Opción no válida. Vuelva a escoger");
+                System.out.println( "Opción no válida. Vuelva a escoger" );
                 //Si la opcion es diferente a cero, solicitamos los
-                //dos operandos
+                //dos operandos (Números)
             } else if (opcion != 0) {
 
-                System.out.println("\n");
+                System.out.println( "\n" );
 
-                float operando1, operando2;
+                float numero1, numero2;
 
-                System.out.print("Introduzca el primer operando: ");
-                operando1 = Float.parseFloat(sc.nextLine());
+                System.out.print( "Introduzca el primer operando: " );
+                numero1 = Float.parseFloat(sc.nextLine());
 
-                System.out.print("Introduzca el segundo operando: ");
-                operando2 = Float.parseFloat(sc.nextLine());  //recoge un valor por teclado y lo convierte en teclado
+                System.out.print( "Introduzca el segundo operando: " );
+                numero2 = Float.parseFloat(sc.nextLine());  //recoge un valor por teclado y lo convierte en teclado
 
 
                 System.out.println("\n");
@@ -73,21 +70,20 @@ public class Calculator {
                 switch(opcion) {
 
                     case 1: //Suma
-                        System.out.println("El resultado de la suma es " + (operando1 + operando2));
+                        System.out.println( "El resultado de la suma es " + ( numero1 + numero2 ) );
                         break;
                     case 2: //Resta
-                        System.out.println("El resultado de la resta es " + (operando1 - operando2));
+                        System.out.println( "El resultado de la resta es " + ( numero1 - numero2 ) );
                         break;
                     case 3: //Multiplicación
-                        System.out.println("El resultado de la multiplicación es " + (operando1 * operando2));
+                        System.out.println( "El resultado de la multiplicación es " + ( numero1 * numero2 ) );
                         break;
                     case 4: //División
-                        System.out.println("El resultado de la división es " + (operando1 / operando2));
+                        System.out.println( "El resultado de la división es " + ( numero1 / numero2 ) );
                         break;
                     case 5: //Resto
-                        System.out.println("El resto de dividir " +operando1 + " entre " + operando2 + " es "+ (operando1 % operando2));
+                        System.out.println( "El resto de dividir " +numero1 + " entre " + numero2 + " es " + ( numero1 % numero2 ) );
                         break;
-
                 }
 
             }
@@ -97,7 +93,7 @@ public class Calculator {
         //Indicamos que no vamos a leer ningún valor más por teclado.
         sc.close();
 
-        System.out.println("Finalizando la ejecución de la calculadora");
+        System.out.println( "Finalizando la ejecución de la calculadora" );
 
     }
 
