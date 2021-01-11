@@ -64,7 +64,6 @@ public class Calculator {
                 System.out.print( "Introduzca el segundo operando: " );
                 numero2 = Float.parseFloat(sc.nextLine());  //recoge un valor por teclado y lo convierte en teclado
 
-
                 System.out.println("\n");
 
                 switch(opcion) {
@@ -85,9 +84,7 @@ public class Calculator {
                         System.out.println( "El resto de dividir " +numero1 + " entre " + numero2 + " es " + ( numero1 % numero2 ) );
                         break;
                 }
-
             }
-
         } while (opcion != 0); //opcion == 0 implicar salir del programa
 
         //Indicamos que no vamos a leer ningún valor más por teclado.
