@@ -29,7 +29,7 @@ public class Calculator {
         do {
             //Imprimimos por consola el menú
             System.out.println( "\n"); //Este caracter especial nos permite imprimir una línea en blanco
-            System.out.println( "***** CALCULADORA HARDSOFTDAY *****" );
+            System.out.println( "***** CALCULADORA *****" );
             System.out.println( "1. Sumar" );
             System.out.println( "2. Restar" );
             System.out.println( "3. Multiplicar" );
